@@ -1,0 +1,28 @@
+1)How to link style.css of an app created by express genrator
+    go to public/stylesheet then edit style.css acording to your needs
+    go to views find index.ejs
+    in index.ejs write the location of stylesheet in link example <link rel='stylesheet' href='../public/stylesheets/style.css' />
+    remove /public from href then it will look like <link rel='stylesheet' href='../stylesheets/style.css' />
+    
+   then try to run the server
+   
+2)how can server send its data in respond to the client and how at browser side it can be used 
+    go to routes/index.js their in get function ,send data as object as 2nd parameter of res.render('insert')
+    example res.render("insert",{names:['lokesh','ravi','rahul']});
+    Note - above {names:['lokesh','ravi','rahul']} means server is sending object name which contains an array  ['lokesh','ravi','rahul']
+    
+    
+  3)then for using data that server has sent 
+    go to views/index.ejs
+    there use <%= name%> to get name data means  ['lokesh','ravi','rahul'] tit will print lokesh,ravi,rahul on web browser
+    there use <% names.forEach(function(val){ %>
+              <h1> <%= val%> </h1>
+              <% }) %>
+              to print lokesh in web browser
+                        ravi
+                        rahul 
+                        
+                        
+    
+    
+ 
