@@ -1,0 +1,11 @@
+open cmd
+npm install -g express-generator {only once}
+express --view=ejs <name of app>
+cd myapp
+npm install
+
+
+this will create a folder named <name of app> which has all the genaraly required ejs templates and modules installed
+
+ref-link
+http://expressjs.com/en/starter/generator.html#express-application-generator
